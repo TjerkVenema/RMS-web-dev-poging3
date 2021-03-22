@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS web dev poging3", "RMS web dev poging3\RMS web dev poging3.csproj", "{1EC991EB-61AB-48F4-A9C5-7D94D451F2E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EC991EB-61AB-48F4-A9C5-7D94D451F2E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC991EB-61AB-48F4-A9C5-7D94D451F2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC991EB-61AB-48F4-A9C5-7D94D451F2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC991EB-61AB-48F4-A9C5-7D94D451F2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E99D432-BC4D-4A5C-A8F3-9EC28E94CB56}
+	EndGlobalSection
+EndGlobal
