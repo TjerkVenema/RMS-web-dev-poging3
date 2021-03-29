@@ -5,22 +5,4 @@
     <RootNamespace>RMS_web_dev_poging3</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.78" />
-    <PackageReference Include="MySql.Data" Version="8.0.23" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\Pages\Index.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Paginas\Kopen.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Paginas\Login.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Paginas\MyCollection.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Paginas\Register.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Paginas\Verkopen.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Shared\_Layout.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\Shared\_ValidationScriptsPartial.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\_ViewImports.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Pages\_ViewStart.cshtml" />
-  </ItemGroup>
-
 </Project>
