@@ -16,7 +16,7 @@ namespace RMS_web_dev_poging3.Pages.Repository
                                        Server=127.0.0.1; Port=3306;
                                        Database=rms;
                                        Uid=root;
-                                       Pwd=Test12345;";
+                                       Pwd=Umbrio-Lanka100;";
 
             return new MySqlConnection(connectionString);
         }
