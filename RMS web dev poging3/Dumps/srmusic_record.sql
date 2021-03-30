@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: rms
+-- Host: localhost    Database: srmusic
 -- ------------------------------------------------------
 -- Server version	8.0.23
 
@@ -34,9 +34,8 @@ CREATE TABLE `record` (
   `dateadded` date DEFAULT NULL,
   `collection` varchar(45) DEFAULT NULL,
   `notes` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`record_id`),
-  KEY `owner_fk_idx` (`owner`),
-  CONSTRAINT `owner_fk` FOREIGN KEY (`owner`) REFERENCES `user` (`user_id`)
+  `price` int DEFAULT NULL,
+  PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -46,7 +45,7 @@ CREATE TABLE `record` (
 
 LOCK TABLES `record` WRITE;
 /*!40000 ALTER TABLE `record` DISABLE KEYS */;
-INSERT INTO `record` VALUES (1,3,'david bowie','Heroes',NULL,'CD','9',NULL,NULL,NULL,NULL),(2,2,'elton john','elton john',NULL,'LP','9',NULL,NULL,NULL,NULL),(3,4,'Bob_Marley','Three Little Birds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','PrachtigePlaat'),(4,5,'Bob_Marley','Three Little Birds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','Prachtige_Plaat'),(5,3,'Bob_Marley','Three Little Birds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','Prachtige_Plaat'),(6,2,'Bob_Marley','Three LittleBirds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','Prachtige_Plaat');
+INSERT INTO `record` VALUES (1,3,'david bowie','Heroes',NULL,'CD','9',NULL,NULL,NULL,NULL,50),(2,2,'elton john','elton john',NULL,'LP','9',NULL,NULL,NULL,NULL,40),(3,4,'Bob_Marley','Three Little Birds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','PrachtigePlaat',35),(4,5,'Bob_Marley','Three Little Birds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',30),(5,3,'Bob_Marley','Three Little Birds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',35),(6,2,'Bob_Marley','Three LittleBirds','Tuff_Gong','LP','8','1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',35);
 /*!40000 ALTER TABLE `record` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-30 12:02:27
+-- Dump completed on 2021-03-29 13:23:46
