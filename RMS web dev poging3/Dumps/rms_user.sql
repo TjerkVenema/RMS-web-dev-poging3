@@ -34,7 +34,7 @@ CREATE TABLE `user` (
   `country` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `emailadres_UNIQUE` (`emailadres`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (2,'Samuel','Jansen','hutjemutje@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(3,'Samuel','Jansen','hoi@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(4,'Samuel','Jansen','poah@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(5,'Samuel','Jansen','hallo@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(6,'Tjerk','Venema','goeie@hoi.com','test12345',NULL,NULL,NULL,NULL),(7,NULL,NULL,'hoi@hoi.com','hoi',NULL,NULL,NULL,NULL),(8,NULL,NULL,'2@3','Test12345',NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (2,'Samuel','Jansen','hutjemutje@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(3,'Samuel','Jansen','hoi@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(4,'Samuel','Jansen','poah@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(5,'Samuel','Jansen','hallo@gmail.com','testing123','legedyk 68','wirdum','9088AC','Wirdum'),(6,'Tjerk','Venema','goeie@hoi.com','test12345',NULL,NULL,NULL,NULL),(7,NULL,NULL,'hoi@hoi.com','hoi',NULL,NULL,NULL,NULL),(8,NULL,NULL,'2@3','Test12345',NULL,NULL,NULL,NULL),(9,NULL,NULL,'2@4','hoi',NULL,NULL,NULL,NULL),(10,NULL,NULL,'2@5','hallo',NULL,NULL,NULL,NULL),(11,NULL,NULL,'2@6','qwe',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-30 12:02:27
+-- Dump completed on 2021-03-30 16:29:34
