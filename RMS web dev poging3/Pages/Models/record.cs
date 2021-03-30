@@ -16,6 +16,7 @@ namespace RMS_web_dev_poging3.Pages.Models
         public string collection { get; set; }
         public string notes { get; set; }
         public int price { get; set; }
+        public bool for_sale { get; set; }
         
     }
 }
