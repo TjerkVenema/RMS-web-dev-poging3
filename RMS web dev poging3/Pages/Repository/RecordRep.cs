@@ -10,26 +10,48 @@ namespace RMS_web_dev_poging3.Pages.Repository
 {
     public class RecordRep
     {
-        public IDbConnection Connect()
+        public static IDbConnection Connect()
         {
             string connectionString = @"
                                        Server=127.0.0.1; Port=3306;
-                                       Database=srmusic;
+                                       Database=rms;
                                        Uid=root;
-                                       Pwd=Test@1234!;";
+                                       Pwd=Test12345;";
 
             return new MySqlConnection(connectionString);
         }
         
-        public List<record> Get()
+        public static List<record> Get()
         {
-
             using var connection = Connect();
-            List<record> gift = connection.Query<record>("SELECT * FROM record").ToList();
-            return gift;
+            var gift = connection.Query<record>("SELECT * FROM record");
+            return gift.ToList();
+        }
 
+        public static void AddRecord(record newrecord)
+        {
+            using var connection = Connect();
+            connection.Execute(
+                "INSERT INTO record(owner, artist, title, label, notes) VALUES (@owner, @artist, @title, @label, @notes)",
+                new
+                {
+                    owner = newrecord.owner,
+                    artist = newrecord.artist,
+                    title = newrecord.title,
+                    label = newrecord.label,
+                    notes = newrecord.notes
+                });
         }
         
+        public static List<record> GetRecordsByOwner(int ownerId)
+        {
+            using var connection = Connect(); 
+            var listrecords = connection.Query<record>(
+                "SELECT * FROM record WHERE owner = @owner",
+                new {owner = ownerId}
+            );
+            return listrecords.ToList();
+        }
 
 
 

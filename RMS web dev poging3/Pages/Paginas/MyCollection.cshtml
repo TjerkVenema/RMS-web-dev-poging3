@@ -56,11 +56,12 @@
 
         <div class="row">
             <div class="col-md-3 col-sm-6">
+                <form method="post">
                 <div class="product-grid">
                     <div class="product-image">
                         <a href="#">
-                        <img class="pic-1" src="~/css/images/blocked.jpg">
-                        <img class="pic-2" src="~/css/images/blocked.jpg">
+                            <img class="pic-1" src="~/css/images/blocked.jpg">
+                            <img class="pic-2" src="~/css/images/blocked.jpg">
                         </a>
 
                         <span class="product-new-label">Sale</span>
@@ -74,21 +75,22 @@
                         <li class="fa fa-star disable"></li>
                     </ul>
                     <div class="product-content">
-                    <h3 class="title"><a href="#">Toevoegen +</a></h3>
-                    <input class="form-control " placeholder="Naam" required>
-                    <input class="form-control " placeholder="Artist" required>
-                    <input class="form-control " placeholder="Beschrijving" required>
-                    <input class="form-control " placeholder="Label" required>
-                    <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
-                        LP
-                    </label>&nbsp; &nbsp; &nbsp;
-                    <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" >
-                        CD
-                    </label>
+                        <button asp-page-handler="AddRecord" class="title">Toevoegen</button>
+                        <input asp-for="newrecord.title" class="form-control " placeholder="Naam" required>
+                        <input asp-for="newrecord.artist"class="form-control " placeholder="Artist" required>
+                        <input asp-for="newrecord.notes"class="form-control " placeholder="Beschrijving" required>
+                        <input asp-for="newrecord.label"class="form-control " placeholder="Label" required>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                            LP
+                        </label>&nbsp; &nbsp; &nbsp;
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue">
+                            CD
+                        </label>
                     </div>
                 </div>
+                </form>
             </div>
 
     @foreach (var LP in Model.records)

@@ -29,6 +29,7 @@ namespace RMS_web_dev_poging3.Pages.Paginas
             }
             else
             {
+                Response.Cookies.Append("user_id",user.user_id.ToString());
                 return RedirectToPage("/Paginas/MyCollection");
             }
             
