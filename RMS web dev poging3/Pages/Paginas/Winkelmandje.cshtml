@@ -50,77 +50,280 @@
       </nav>
 <p></p>
 
-<div class="container" style="background-color: white; border-radius: 8px;">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>Product</th>
-                    <th class="text-center">Price</th>
-                    <th class="text-center">Total</th>
-                    <th> </th>
-                </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a> &nbsp;
-                            <div class="media-body">
-                                <h4 class="media-heading"><a>Title</a></h4>
-                                <h5 class="media-heading"><a>Artist</a></h5>
+<p></p>
+<div class='container' style="background-color: white; border-radius: 8px;">
+    <div class='row' style='padding-top:25px; padding-bottom:25px;'>
+        <div class='col-md-12'>
+            <div id='mainContentWrapper'>
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 style="text-align: center;">
+                        Review Your Order & Complete Checkout
+                    </h2>
+                    <hr/>
+                    <a href="Kopen" class="btn btn-info" style="width: 100%;">Verder Winkelen</a>
+                    <hr/>
+                    <div class="shopping_cart">
+                        <form class="form-horizontal" role="form" action="" method="post" id="payment-form">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <button class="btn btn-success" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-align: center; width:100%;">
+                                                Bestelling Bekijken
+                                            </button>
+                                        </h4>
+                                    </div>
+                                    
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="items">
+                                                <div class="col-md-9">
+                                                    <table class="table table-striped">
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <a class="btn btn-warning btn-sm pull-right"
+                                                                   href="http://www.startajobboard.com/"
+                                                                   title="Remove Item">X</a>
+                                                                <b>
+                                                                    Premium Posting</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <ul>
+                                                                    <li>One Job Posting Credit</li>
+                                                                    <li>Job Distribution*</li>
+                                                                    <li>Social Media Distribution</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <b>$147.00</b>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div style="text-align: center;">
+                                                        <h3>Order Total</h3>
+                                                        <h3><span style="color:green;">$147.00</span></h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
                             </div>
-                        </div></td>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <div style="text-align: center; width:100%;"><a style="width:100%;"
+                                                                                        data-toggle="collapse"
+                                                                                        data-parent="#accordion"
+                                                                                        href="#collapseTwo"
+                                                                                        class=" btn btn-success"
+                                                                                        onclick="$(this).fadeOut(); $('#payInfo').fadeIn();">
+                                            Uw Gegevens »
+                                        </a></div>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
 
-                        <td class="col-sm-1 col-md-1 text-center"><strong>€4.87</strong></td>
-                        <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                    </tr>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <b>
+                                            Controlleer uw gegevens.
+                                        </b>
+                                        <br/><br/>
+                                        <table class="table table-striped" style="font-weight: bold;">
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_email">Best Email:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_email" name="email"
+                                                           required="required" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_first_name">First name:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_first_name" name="first_name"
+                                                           required="required" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_last_name">Last name:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_last_name" name="last_name"
+                                                           required="required" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_address_line_1">Address:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_address_line_1"
+                                                           name="address_line_1" required="required" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_address_line_2">Unit / Suite #:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_address_line_2"
+                                                           name="address_line_2" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_city">City:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_city" name="city"
+                                                           required="required" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_postalcode">Postalcode:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_postalcode" name="postalcode"
+                                                           required="required" type="text"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 175px;">
+                                                    <label for="id_phone">Phone:</label></td>
+                                                <td>
+                                                    <input class="form-control" id="id_phone" name="phone" type="text"/>
+                                                </td>
+                                            </tr>
 
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <div style="text-align: center;"><a data-toggle="collapse"
+                                                                            data-parent="#accordion"
+                                                                            href="#collapseThree"
+                                                                            class=" btn   btn-success" id="payInfo"
+                                                                            style="width:100%;display: none;" onclick="$(this).fadeOut();  
+                   document.getElementById('collapseThree').scrollIntoView()">Betaal gegevens invoeren »</a>
+                                        </div>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" >
+                                    <h4 class="panel-title">
+                                        <button class="btn btn-success" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="text-align: center; width:100%;">
+                                            <b>Betalen</b>
+                                        </button>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <span class='payment-errors'></span>
+                                        <fieldset>
+                                            <legend>Hoe wilt u betalen?</legend>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label" for="card-holder-name">
+                                                    Naam kaarthouder
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" stripe-data="name"
+                                                           id="name-on-card" placeholder="Kaarthouder">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label" for="card-number">
+                                                    Kaart nummer
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" stripe-data="number"
+                                                           id="card-number" placeholder="Kaart nummer">
+                                                    <br/>
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label" for="expiry-month">
+                                                        Verval datum
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <div class="row">
+                                                            <div class="col-xs-3">
+                                                                <select class="form-control"
+                                                                        data-stripe="exp-month" 
+                                                                        id="card-exp-month">
+                                                                    
+                                                                    <option value="01">Jan</option>
+                                                                    <option value="02">Feb</option>
+                                                                    <option value="03">Mar</option>
+                                                                    <option value="04">Apr</option>
+                                                                    <option value="05">May</option>
+                                                                    <option value="06">June</option>
+                                                                    <option value="07">July</option>
+                                                                    <option value="08">Aug</option>
+                                                                    <option value="09">Sep</option>
+                                                                    <option value="10">Oct</option>
+                                                                    <option value="11">Nov</option>
+                                                                    <option value="12">Dec</option>
+                                                                </select>
+                                                            </div> &nbsp;
+                                                            <div class="col-xs-3">
+                                                                <select class="form-control" data-stripe="exp-year"
+                                                                        id="card-exp-year">
+                                                                    <option value="2016">2016</option>
+                                                                    <option value="2017">2017</option>
+                                                                    <option value="2018">2018</option>
+                                                                    <option value="2019">2019</option>
+                                                                    <option value="2020">2020</option>
+                                                                    <option value="2021">2021</option>
+                                                                    <option value="2022">2022</option>
+                                                                    <option value="2023">2023</option>
+                                                                    <option value="2024">2024</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label" for="cvv">Kaart CVC</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" class="form-control" stripe-data="cvc"
+                                                               id="card-cvc" placeholder="Code">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-3 col-sm-9">
+                                                    </div>
+                                                </div></div>
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-success btn-lg" style="width:100%;">
+                                            Nu Betalen
+                                        </button>
+                                        <br/>
+                                        <div style="text-align: left;"><br/>
+                                            By submiting this order you are agreeing to our <a href="/legal/billing/">universal
+                                                billing agreement</a>, and <a href="/legal/terms/">terms of service</a>.
+                                            If you have any questions about our products or services please contact us
+                                            before placing this order.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></form>
+                    </div>
+                </div>
                 
-                <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h5>Estimated shipping</h5></td>
-                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>
-                        <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> <a href="Kopen">Continue Shopping</a>
-                        </button></td>
-                        <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
-                    </tr>
-                </tbody>
-            </table>
+            </div>
         </div>
     </div>
-</div>
 
 
 
@@ -134,6 +337,6 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"
   ></script>
-  <script src="~/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+  <script src="~/bootstrap-4.4.1-dist/js/bootstrap.js"></script></div>
 </body>
 </html>
