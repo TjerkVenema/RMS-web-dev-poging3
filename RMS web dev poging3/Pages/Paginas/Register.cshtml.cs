@@ -15,7 +15,7 @@ namespace RMS_web_dev_poging3.Pages.Paginas
 
         public IActionResult OnPostRegister()
         {
-            if (newUser.password == passcheck)
+            if (ModelState.IsValid)
             {
                 UserRep.Adduser(newUser);
                 return RedirectToPage("/Paginas/Login");

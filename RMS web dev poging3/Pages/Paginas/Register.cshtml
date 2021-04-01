@@ -67,15 +67,17 @@
 
                       <div class="form-label-group">
                         <label for="inputPassword">Wachtwoord</label>
-                        <input asp-for="newUser.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input asp-for="newUser.password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+                        <span asp-validation-for="newUser.password"></span>
                       </div>
                       <div class="form-label-group">
                         <label for="inputPassword2">Wachtwoord herhalen</label>
-                        <input asp-for="passcheck" type="password" id="inputPassword2" class="form-control" placeholder="Password" required>
+                        <input asp-for="passcheck" type="password" id="inputPassword2" class="form-control" placeholder="Password">
+                        <span asp-validation-for="newUser.password"></span>
                       </div>
                       <p></p>
 
-                      <button asp-page-handler="Register" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onclick="location.href='MyCollection'">Registreren</button>
+                      <button asp-page-handler="Register" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registreren</button>
                       
 
                     </form>
