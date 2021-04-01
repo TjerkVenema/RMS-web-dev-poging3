@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http;
 
 namespace RMS_web_dev_poging3.Pages.Models
 {
@@ -17,6 +18,7 @@ namespace RMS_web_dev_poging3.Pages.Models
         public string notes { get; set; }
         public int price { get; set; }
         public bool for_sale { get; set; }
+        public IFormFile foto { get; set; }
         
     }
 }
