@@ -9,7 +9,7 @@ namespace RMS_web_dev_poging3.Pages.Models
         public string lastname { get; set; }
         public string emailadres { get; set; }
         
-        [MinLength(5, ErrorMessage = "Minimaal 5 karakters")]
+        [MinLength(6, ErrorMessage = "Minimaal 5 karakters")]
         [MaxLength(30)]
         public string password { get; set; }
         public string adres { get; set; }
