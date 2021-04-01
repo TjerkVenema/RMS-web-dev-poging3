@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `record`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `record` (
   `record_id` int NOT NULL AUTO_INCREMENT,
-  `owner` int DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
   `artist` varchar(45) DEFAULT NULL,
   `title` varchar(45) DEFAULT NULL,
   `label` varchar(45) DEFAULT NULL,
@@ -36,8 +36,8 @@ CREATE TABLE `record` (
   `notes` varchar(45) DEFAULT NULL,
   `for_sale` tinyint NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`),
-  KEY `owner_fk_idx` (`owner`),
-  CONSTRAINT `owner_fk` FOREIGN KEY (`owner`) REFERENCES `user` (`user_id`)
+  KEY `owner_fk_idx` (`user_id`),
+  CONSTRAINT `owner_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-30 16:29:34
+-- Dump completed on 2021-04-01 11:10:08
