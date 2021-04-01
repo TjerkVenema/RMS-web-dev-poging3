@@ -38,9 +38,27 @@
       </nav>
 
 
+<div>
+  <form method="post">
+    <select name="records">
+      @foreach (var record in Model.verkoopcollectie)
+      {
+        <option value=@record.record_id>@record.title</option>
+      }
+    </select>
+    <button type="submit" asp-page-handler="View">View</button>
+  </form>
+  
+  <form method="post">
+    <input type="text" asp-for="verkooprecord.notes" placeholder="Description">
+    <input type="text" asp-for="verkooprecord.price" placeholder="Price">
+    <button asp-page-handler="Submit">Submit</button>
+  </form>
 
 
-
+  <h3>@ViewData["Title"]</h3>
+  <h3>@ViewData["Artist"]</h3>
+</div>
 
     <script
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

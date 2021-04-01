@@ -19,9 +19,9 @@ namespace RMS_web_dev_poging3.Pages.Paginas
 
         public void OnPostAddRecord()
         {
-            newrecord.owner = Convert.ToInt32(Request.Cookies["user_id"]);
+            newrecord.user_id = Convert.ToInt32(Request.Cookies["user_id"]);
             RecordRep.AddRecord(newrecord);
-            records = RecordRep.GetRecordsByOwner(newrecord.owner);
+            records = RecordRep.GetRecordsByOwner(newrecord.user_id);
         }
         
         public void OnGet()

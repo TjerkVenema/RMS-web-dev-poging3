@@ -35,10 +35,11 @@ CREATE TABLE `record` (
   `collection` varchar(45) DEFAULT NULL,
   `notes` varchar(45) DEFAULT NULL,
   `for_sale` tinyint NOT NULL DEFAULT '0',
+  `price` float DEFAULT NULL,
   PRIMARY KEY (`record_id`),
   KEY `owner_fk_idx` (`user_id`),
   CONSTRAINT `owner_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +48,7 @@ CREATE TABLE `record` (
 
 LOCK TABLES `record` WRITE;
 /*!40000 ALTER TABLE `record` DISABLE KEYS */;
-INSERT INTO `record` VALUES (1,3,'David Bowie','Heroes',NULL,'CD',NULL,NULL,NULL,NULL,NULL,0),(2,2,'Elton John','Your Song',NULL,'LP',NULL,NULL,NULL,NULL,NULL,1),(3,4,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','PrachtigePlaat',0),(4,5,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',1),(5,3,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',0),(6,2,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',0),(7,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0),(8,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0),(9,NULL,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0),(10,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0),(11,7,'hallo','hallo','hallo',NULL,NULL,NULL,NULL,NULL,'hallo',0),(12,7,'hallo','hallo','hallo',NULL,NULL,NULL,NULL,NULL,'hallo',0),(13,11,'poah','poah','poah',NULL,NULL,NULL,NULL,NULL,'poah',0),(14,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0);
+INSERT INTO `record` VALUES (1,3,'David Bowie','Heroes',NULL,'CD',NULL,NULL,NULL,NULL,NULL,0,NULL),(2,2,'Elton John','Your Song',NULL,'LP',NULL,NULL,NULL,NULL,NULL,1,NULL),(3,4,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','PrachtigePlaat',0,NULL),(4,5,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',1,NULL),(5,3,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',0,NULL),(6,2,'Bob Marley','Three Little Birds','Tuff_Gong','LP',NULL,'1977-03-22','2021-03-22','Exodus','Prachtige_Plaat',0,NULL),(7,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'poah dat is een mooie plaat',1,50),(8,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',1,234),(9,NULL,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0,NULL),(10,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',1,0),(11,7,'hallo','hallo','hallo',NULL,NULL,NULL,NULL,NULL,NULL,1,0),(12,7,'hallo','hallo','hallo',NULL,NULL,NULL,NULL,NULL,'hallo',0,NULL),(13,11,'poah','poah','poah',NULL,NULL,NULL,NULL,NULL,'poah',0,NULL),(14,7,'hoi','hoi','hoi',NULL,NULL,NULL,NULL,NULL,'hoi',0,NULL),(15,7,'poah','poah','poah',NULL,NULL,NULL,NULL,NULL,'poah',1,10),(16,7,'poah','poah','poah',NULL,NULL,NULL,NULL,NULL,'poah',1,0);
 /*!40000 ALTER TABLE `record` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-01 11:10:08
+-- Dump completed on 2021-04-01 15:33:33
