@@ -14,7 +14,7 @@ namespace RMS_web_dev_poging3.Pages.Repository
         {
             string connectionString = @"
                                        Server=127.0.0.1; Port=3306;
-                                       Database=rms;
+                                       Database=smr;
                                        Uid=root;
                                        Pwd=Test12345;";
 
@@ -24,8 +24,8 @@ namespace RMS_web_dev_poging3.Pages.Repository
         public static List<record> Get()
         {
             using var connection = Connect();
-            var gift = connection.Query<record>("SELECT * FROM record");
-            return gift.ToList();
+            var gift = connection.Query<record>("SELECT * FROM record").ToList();
+            return gift;
         }
 
         public static void AddRecord(record newrecord)

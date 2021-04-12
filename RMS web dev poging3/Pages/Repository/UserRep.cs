@@ -11,7 +11,7 @@ namespace RMS_web_dev_poging3.Pages.Repository
         {
             string connectionString = @"
                                        Server=127.0.0.1; Port=3306;
-                                       Database=rms;
+                                       Database=srm;
                                        Uid=root;
                                        Pwd=Test12345;";
 
