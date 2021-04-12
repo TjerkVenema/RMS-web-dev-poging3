@@ -3,7 +3,9 @@
 
 @{
     Layout = null;
+    
 }
+
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,33 +75,41 @@
                                         <div class="panel-body">
                                             <div class="items">
                                                 <div class="col-md-9">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <td colspan="2">
-                                                                <a class="btn btn-warning btn-sm pull-right"
-                                                                   href="http://www.startajobboard.com/"
-                                                                   title="Remove Item">X</a>
-                                                                <b>
-                                                                    Premium Posting</b></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <ul>
-                                                                    <li>One Job Posting Credit</li>
-                                                                    <li>Job Distribution*</li>
-                                                                    <li>Social Media Distribution</li>
-                                                                </ul>
-                                                            </td>
-                                                            <td>
-                                                                <b>$147.00</b>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
+                                                    @if (Model.Records != null)
+                                                    {
+                                                        @foreach (var record in Model.Records)
+                                                        {
+                                                            Model.PriceTotal += record.price;
+                                                             <table class="table table-striped">
+                                                                 <tr>
+                                                                     <td colspan="2">
+                                                                         <a class="btn btn-warning btn-sm pull-right"
+                                                                            href="http://www.startajobboard.com/"
+                                                                            title="Remove Item">X</a>
+                                                                         <b> @record.title</b></td>
+                                                                     </tr>
+                                                                 <tr>
+                                                                     <td>
+                                                                         <ul>
+                                                                             <li>@record.artist</li>
+                                                                             <li>@record.label</li>
+                                                                             <li>@record.notes</li>
+                                                                             </ul>
+                                                                         </td>
+                                                                     <td>
+                                                                         <b>@record.price</b>
+                                                                         </td>
+                                                                     </tr>
+                                                                 </table>
+                                                         }
+                                                    }
                                                 </div>
+                                                
+                                                
                                                 <div class="col-md-3">
                                                     <div style="text-align: center;">
                                                         <h3>Order Total</h3>
-                                                        <h3><span style="color:green;">$147.00</span></h3>
+                                                        <h3><span style="color:green;">@Model.PriceTotal</span></h3>
                                                     </div>
                                                 </div>
                                             </div>

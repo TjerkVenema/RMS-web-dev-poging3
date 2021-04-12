@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using Dapper;
@@ -64,6 +65,23 @@ namespace RMS_web_dev_poging3.Pages.Repository
                     notes = updateRecord.notes,
                     record_id = updateRecord.record_id
                 });
+        }
+
+        public static List<record> GetRecordsInCart(List<int> recordId)
+        {
+            using var connection = Connect();
+            var recordlist = new List<record>();
+            foreach (var id in recordId)
+            {
+                var record = connection.QuerySingleOrDefault<record>(
+                    "SELECT * FROM record WHERE record_id = @record_id",
+                    new
+                    {
+                        record_id = id
+                    });
+                recordlist.Add(record);
+            }
+            return recordlist;
         }
 
         
