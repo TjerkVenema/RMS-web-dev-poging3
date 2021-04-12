@@ -60,7 +60,7 @@
                     <a href="Kopen" class="btn btn-info" style="width: 100%;">Verder Winkelen</a>
                     <hr/>
                     <div class="shopping_cart">
-                        <form class="form-horizontal" role="form" action="" method="post" id="payment-form">
+                       
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
@@ -310,9 +310,11 @@
                                                     </div>
                                                 </div></div>
                                         </fieldset>
-                                        <button type="submit" class="btn btn-success btn-lg" style="width:100%;">
-                                            Nu Betalen
-                                        </button>
+                                        <form method="post">
+                                            <button type="submit" asp-page-handler="Buy" class="btn btn-success btn-lg" style="width:100%;">
+                                                Nu Betalen
+                                            </button>
+                                        </form>
                                         <br/>
                                         <div style="text-align: left;"><br/>
                                             By submiting this order you are agreeing to our <a href="/legal/billing/">universal
@@ -322,7 +324,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div></form>
+                            </div>
                     </div>
                 </div>
                 

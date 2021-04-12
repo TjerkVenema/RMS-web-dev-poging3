@@ -67,11 +67,11 @@ namespace RMS_web_dev_poging3.Pages.Repository
                 });
         }
 
-        public static List<record> GetRecordsInCart(List<int> recordId)
+        public static List<record> GetRecordsInCart(List<int> recordIds)
         {
             using var connection = Connect();
             var recordlist = new List<record>();
-            foreach (var id in recordId)
+            foreach (var id in recordIds)
             {
                 var record = connection.QuerySingleOrDefault<record>(
                     "SELECT * FROM record WHERE record_id = @record_id",
@@ -84,7 +84,20 @@ namespace RMS_web_dev_poging3.Pages.Repository
             return recordlist;
         }
 
-        
+        public static void RecordSold(List<int> recordIds, int buyerId)
+        {
+            using var connection = Connect();
+            foreach (var id in recordIds)
+            {
+                connection.Execute(
+                    "UPDATE record SET for_sale = 0, user_id = @user_id WHERE record_id = @record_id",
+                    new
+                    {
+                        user_id = buyerId,
+                        record_id = id
+                    });
+            }
+        }
 
 
 

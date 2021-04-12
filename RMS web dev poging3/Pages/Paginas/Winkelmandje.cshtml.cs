@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -25,7 +26,21 @@ namespace RMS_web_dev_poging3.Pages.Paginas
             {
                 Records = RecordRep.GetRecordsInCart(cart);
             }
+        }
+
+        public IActionResult OnPostBuy()
+        {
+            List<int> cart = HttpContext.Session.GetObjectFromJson<List<int>>("cart");
+            List<record> records = RecordRep.GetRecordsInCart(cart);
+            int buyerId = Convert.ToInt32(Request.Cookies["user_id"]);
+            if (cart != null)
+            {
+                RecordRep.RecordSold(cart, buyerId);
+                Record_For_SaleRep.RecordSold(records, buyerId);
+            }
             
+            HttpContext.Session.Remove("cart");
+            return RedirectToPage("/Paginas/MyCollection");
         }
     }
 }
