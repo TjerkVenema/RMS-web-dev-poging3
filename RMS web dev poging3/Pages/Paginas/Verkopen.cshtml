@@ -53,25 +53,50 @@
 
 
 <div>
-  <form method="post">
-    <select name="records">
-      @foreach (var record in Model.verkoopcollectie)
-      {
-        <option value=@record.record_id>@record.title</option>
-      }
-    </select>
-    <button type="submit" asp-page-handler="View">Bekijk</button>
-  </form>
+
   
-  <form method="post">
-    <input type="text" asp-for="verkooprecord.notes" placeholder="Description">
-    <input type="text" asp-for="verkooprecord.price" placeholder="Price">
-    <button asp-page-handler="Submit">Submit</button>
-  </form>
+  
+        <div class="container login">
+          <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                    <form method="post">
+                      <select name="records" class="form-control">
+                        @foreach (var record in Model.verkoopcollectie)
+                        {
+                          <option value=@record.record_id>@record.title</option>
+                        }
+                      </select>
+                      <p></p>
+                      <button type="submit" asp-page-handler="View" class="btn btn-lg btn-success btn-block">Bekijk informatie</button>
+                    </form>
+                  <p></p>
+                  <form method="post">
+                    <input type="text" asp-for="verkooprecord.notes" placeholder="Description" class="form-control">
+                    <p></p>
+                    <input type="text" asp-for="verkooprecord.price" placeholder="Price" class="form-control">
+                    <p></p>
+                    <button asp-page-handler="Submit" class="btn btn-lg btn-success btn-block">Submit</button>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-  <h3>@ViewData["Title"]</h3>
-  <h3>@ViewData["Artist"]</h3>
+          <div class="container login">
+            <div class="row">
+              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                  <div class="card-body">
+                    <h3>Title: @ViewData["Title"]</h3>
+                    <h3>Artiest: @ViewData["Artist"]</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>           
 </div>
 
     <script
