@@ -15,8 +15,6 @@ namespace RMS_web_dev_poging3.Pages.Paginas
         [BindProperty]
         public List<record> records { get; set; }
         
-
-
         public void OnPostAddRecord()
         {
             newrecord.user_id = Convert.ToInt32(Request.Cookies["user_id"]);

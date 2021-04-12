@@ -64,9 +64,6 @@
                             <img class="pic-1" src="~/css/images/blocked.jpg">
                             <img class="pic-2" src="~/css/images/blocked.jpg">
                         </a>
-
-                        <span class="product-new-label">Sale</span>
-                        <span class="product-discount-label">20%</span>
                     </div>
                     <ul class="rating">
                         <li class="fa fa-star"></li>
@@ -101,10 +98,85 @@
         <div class="col-md-3 col-sm-6">
             <div class="product-grid">
                 <div class="product-image">
+                    
                     <a href="#">
-                        <img class="pic-1" src="~/css/images/blocked.jpg">
-                        <img class="pic-2" src="~/css/images/blocked.jpg">
+                        @if (LP.artist == "Bob Marley")
+                           {
+                               <img class="pic-1" src="~/css/images/bobM.jpg">
+                               <img class="pic-2" src="~/css/images/bobM.jpg">
+                           }
+                           else if (LP.artist == "David Bowie")
+                           {
+                               <img class="pic-1" src="~/css/images/Heroes.jpg">
+                               <img class="pic-2" src="~/css/images/Heroes.jpg">
+                           }
+                           else if (LP.artist == "Elton John")
+                           {
+                               <img class="pic-1" src="~/css/images/yoursong.jpg">
+                               <img class="pic-2" src="~/css/images/yoursong.jpg">
+                           }
+                           else if (LP.artist == "Queen")
+                           {
+                               <img class="pic-1" src="~/css/images/innuendo.jpg">
+                               <img class="pic-2" src="~/css/images/innuendo.jpg">
+                           }
+                           else if (LP.artist == "Micheal Jackson")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/thriller.jpg">
+                               <img class="pic-2" src="~/css/images/LP/thriller.jpg">
+                           }
+                           else if (LP.artist == "The Beatles")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/abbeyroad.jpeg">
+                               <img class="pic-2" src="~/css/images/LP/abbeyroad.jpeg">
+                           }
+                           else if (LP.artist == "AC DC")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/backinblack.jpg">
+                               <img class="pic-2" src="~/css/images/LP/backinblack.jpg">
+                           }
+                           else if (LP.artist == "Bruce Springsteen")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/bornintheusa.jpg">
+                               <img class="pic-2" src="~/css/images/LP/bornintheusa.jpg">
+                           }
+                           else if (LP.artist == "Gorillaz")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/demondaysgorrilaz.jpg">
+                               <img class="pic-2" src="~/css/images/LP/demondaysgorrilaz.jpg">
+                           }
+                           else if (LP.artist == "Led Zeppelin")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/housesoftheholy.jpg">
+                               <img class="pic-2" src="~/css/images/LP/housesoftheholy.jpg">
+                           }
+                           else if (LP.artist == "NSA")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/illmaticnas.jpg">
+                               <img class="pic-2" src="~/css/images/LP/illmaticnas.jpg">
+                           }
+                           else if (LP.artist == "Fleetwood Mac")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/rumours.jpg">
+                               <img class="pic-2" src="~/css/images/LP/rumours.jpg">
+                           }
+                           else if (LP.artist == "The Rolling Stones")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/stickyfingers.jpg">
+                               <img class="pic-2" src="~/css/images/LP/stickyfingers.jpg">
+                           }
+                           else if (LP.artist == "Pink Floyd")
+                           {
+                               <img class="pic-1" src="~/css/images/LP/thewall.jpg">
+                               <img class="pic-2" src="~/css/images/LP/thewall.jpg">
+                           }
+                           else
+                           {
+                               <img class="pic-1" src="~/css/images/blocked.jpg">
+                               <img class="pic-2" src="~/css/images/blocked.jpg">
+                           }
                     </a>
+
 
 
                 </div>
