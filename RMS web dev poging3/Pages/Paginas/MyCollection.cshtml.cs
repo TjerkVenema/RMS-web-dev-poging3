@@ -30,6 +30,7 @@ namespace RMS_web_dev_poging3.Pages.Paginas
             records = RecordRep.GetRecordsByOwner(Id);
         }
         
+        
     }
     
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using RMS_web_dev_poging3.Pages.Models;
 
 namespace RMS_web_dev_poging3.Pages
 {
@@ -17,8 +18,15 @@ namespace RMS_web_dev_poging3.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public RedirectToPageResult OnGet()
         {
+            int userid = Convert.ToInt32(Request.Cookies["user_id"]);
+            if (userid != 0)
+            {
+                return RedirectToPage("/Paginas/MyCollection");
+            }
+
+            return null;
         }
     }
 }

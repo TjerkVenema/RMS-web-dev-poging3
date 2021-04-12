@@ -37,26 +37,30 @@
       <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="../Index">Home</a>
-          </li>
-          <li class="nav-item">
-            
-          </li>
+                        <a class="nav-link" asp-page="/Paginas/MyCollection">Home</a>
+                    </li>
+                      <li class="nav-item active">
+                      <a class="nav-link" asp-page="/Paginas/Kopen">Kopen</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" asp-page="/Paginas/Verkopen">Verkopen</a>          
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" asp-page="/Paginas/Uitloggen">Uitloggen</a>          
+                      </li>
         </ul>
       </nav>
 
       <div class="container">
-        <h3 class="h3 title">Uw Verzameling:</h3>
+        <h3 class="h3 title">Platen die te koop zijn:</h3>
 
         <div class="row">
   
 
     @foreach (var LP in Model.records)
     {
-        if (LP.for_sale == true)
+        if (LP.for_sale && LP.user_id != Convert.ToInt32(Request.Cookies["user_id"]))
         {
-
-
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid">
                     <div class="product-image">

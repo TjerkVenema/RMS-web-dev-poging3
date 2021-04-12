@@ -25,8 +25,4 @@
     <_ContentIncludedByDefault Remove="Pages\Pages\_ViewStart.cshtml" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Controllers" />
-  </ItemGroup>
-
 </Project>
