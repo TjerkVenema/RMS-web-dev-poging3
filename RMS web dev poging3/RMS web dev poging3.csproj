@@ -7,7 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
     <PackageReference Include="MySql.Data" Version="8.0.23" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +23,10 @@
     <_ContentIncludedByDefault Remove="Pages\Pages\Shared\_ValidationScriptsPartial.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Pages\_ViewImports.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Pages\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Controllers" />
   </ItemGroup>
 
 </Project>

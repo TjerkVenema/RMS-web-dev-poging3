@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace RMS_web_dev_poging3
 {
     public class Startup
@@ -24,6 +25,11 @@ namespace RMS_web_dev_poging3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);
+            });   
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,11 +52,18 @@ namespace RMS_web_dev_poging3
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
             });
+            
+            
+            
+            app.UseStaticFiles();
+            
         }
+        
     }
 }
