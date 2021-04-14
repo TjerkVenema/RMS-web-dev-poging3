@@ -15,9 +15,9 @@ namespace RMS_web_dev_poging3.Pages.Repository
         {
             string connectionString = @"
                                        Server=127.0.0.1; Port=3306;
-                                       Database=srmusic;
+                                       Database=srm;
                                        Uid=root;
-                                       Pwd=Test@1234!;";
+                                       Pwd=Test1234;";
 
             return new MySqlConnection(connectionString);
         }
