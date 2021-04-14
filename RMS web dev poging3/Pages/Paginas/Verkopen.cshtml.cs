@@ -30,9 +30,7 @@ namespace RMS_web_dev_poging3.Pages.Paginas
             verkooprecord = verkoopcollectie.Single(a => a.record_id == value);
 
             Response.Cookies.Append("record_id", verkooprecord.record_id.ToString());
-
-            ViewData["Title"] = verkooprecord.title;
-            ViewData["Artist"] = verkooprecord.artist;
+            
         }
 
         public IActionResult OnPostSubmit()
