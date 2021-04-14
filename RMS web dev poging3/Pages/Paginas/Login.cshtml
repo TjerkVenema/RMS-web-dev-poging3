@@ -59,13 +59,13 @@
                   <div class="form-label-group">
                     <label for="inputEmail">Email</label>
                     <input asp-for="loginUser.emailadres" type="email" id="inputEmail" class="form-control " placeholder="Email address" required autofocus>
-
+                    <span asp-validation-for="loginUser.emailadres"></span>
                   </div>
     
                   <div class="form-label-group">
                     <label for="inputPassword">Wachtwoord</label>
                     <input asp-for="loginUser.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
+                    <span asp-validation-for="loginUser.password"></span>
                   </div>
                   <p></p>
 
