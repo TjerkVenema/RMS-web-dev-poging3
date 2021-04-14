@@ -8,6 +8,7 @@ namespace RMS_web_dev_poging3.Pages.Models
         public int record_id { get; set; }
         public int user_id { get; set; }
         public string artist { get; set; }
+        
         public string title { get; set; }
         public string label { get; set; }
         public string format { get; set; }
